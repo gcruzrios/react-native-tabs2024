@@ -20,6 +20,15 @@ function SettingsScreen() {
   );
 }
 
+function NewsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Last News!</Text>
+    </View>
+  );
+}
+
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -33,10 +42,12 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused
-                ? 'arrow-undo-circle'
-                : 'arrow-undo-circle-outline';
+                ? 'home'
+                : 'home-outline';
             } else if (route.name === 'Settings') {
-              iconName = focused ? 'ios-list' : 'ios-list-outline';
+              iconName = focused ? 'list' : 'list-outline';
+            } else if (route.name === 'News') {
+              iconName = focused ? 'newspaper' : 'newspaper-outline';
             }
 
             // You can return any component that you like here!
@@ -47,6 +58,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="News" component={NewsScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
