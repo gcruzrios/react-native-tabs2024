@@ -15,7 +15,7 @@ function HomeScreen() {
 function SettingsScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
+      <Text style={styles.title}>Settings</Text>
     </View>
   );
 }
@@ -23,7 +23,7 @@ function SettingsScreen() {
 function NewsScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Last News!</Text>
+      <Text style={styles.title}>Last News</Text>
     </View>
   );
 }
