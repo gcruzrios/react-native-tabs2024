@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -7,7 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
+      <Text style={styles.title}>Home!</Text>
     </View>
   );
 }
@@ -33,7 +33,7 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={{flex:1}}>
+    <SafeAreaView style={styles.container}>
   <NavigationContainer>
   <Tab.Navigator
         screenOptions={({ route }) => ({
@@ -67,3 +67,17 @@ export default function App() {
     
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:'center'
+  },
+  title:{
+    fontSize:40,
+    textAlign:'center',
+    color:'black',
+    padding:20
+  }
+  
+})
