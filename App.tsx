@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import HelloScreen from './src/presentation/screens/HelloScreen';
 
 function HomeScreen() {
   return (
@@ -49,6 +50,8 @@ export default function App() {
               iconName = focused ? 'list' : 'list-outline';
             } else if (route.name === 'News') {
               iconName = focused ? 'newspaper' : 'newspaper-outline';
+            } else if (route.name === 'Hello') {
+              iconName = focused ? 'hand-left' : 'hand-left-outline';
             }
 
             // You can return any component that you like here!
@@ -59,6 +62,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} options={{ tabBarBadge: 3 }} />
+        <Tab.Screen name="Hello" component={HelloScreen} />
         <Tab.Screen name="News" component={NewsScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>

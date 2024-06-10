@@ -1,13 +1,16 @@
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native'
+interface Props{
+    name?: string;
+}
 
-const HelloScreen = () => {
+const HelloScreen = ({name = 'World'}: Props) => {
   return (
-    <SafeAreaView style={styles.container}>
+    
     
     <View>
-    <Text style={styles.container}>HelloScreen</Text>
+    <Text style={styles.title}>Hello, {name}</Text>
     </View>
-    </SafeAreaView>
+    
   )
 }
 
@@ -20,8 +23,11 @@ const styles = StyleSheet.create({
       justifyContent:'center'
     },
     title:{
+      
       fontSize:40,
       textAlign:'center',
+      justifyContent: 'center',
+      alignItems: 'center',
       color:'black',
       padding:20
     }
