@@ -5,7 +5,7 @@ const HelloScreen = () => {
     <SafeAreaView style={styles.container}>
     
     <View>
-    <Text style="styles.container">HelloScreen</Text>
+    <Text style={styles.container}>HelloScreen</Text>
     </View>
     </SafeAreaView>
   )
