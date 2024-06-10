@@ -80,6 +80,8 @@ const styles = StyleSheet.create({
   title:{
     fontSize:40,
     textAlign:'center',
+    justifyContent: 'center',
+    alignItems: 'center',
     color:'black',
     padding:20
   }
