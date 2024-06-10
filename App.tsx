@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { SafeAreaView, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -33,6 +33,7 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
+    <SafeAreaView>
   <NavigationContainer>
   <Tab.Navigator
         screenOptions={({ route }) => ({
@@ -62,6 +63,7 @@ export default function App() {
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
+    </SafeAreaView>
     
   );
 }
