@@ -4,14 +4,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HelloScreen from './src/presentation/screens/HelloScreen';
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={styles.title}>Home!</Text>
-    </View>
-  );
-}
+import HomeScreen from './src/presentation/screens/HomeScreen';
+import NewsScreen from './src/presentation/screens/NewsScreen';
+// function HomeScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text style={styles.title}>Home!</Text>
+//     </View>
+//   );
+// }
 
 function SettingsScreen() {
   return (
@@ -21,13 +22,13 @@ function SettingsScreen() {
   );
 }
 
-function NewsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={styles.title}>Last News</Text>
-    </View>
-  );
-}
+// function NewsScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text style={styles.title}>Last News</Text>
+//     </View>
+//   );
+// }
 
 
 const Tab = createBottomTabNavigator();
@@ -80,7 +81,6 @@ const styles = StyleSheet.create({
   title:{
     fontSize:40,
     textAlign:'center',
-    justifyContent: 'center',
     alignItems: 'center',
     color:'black',
     padding:20
