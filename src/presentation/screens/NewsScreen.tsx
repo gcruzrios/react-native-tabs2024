@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Avatar, Button, Card,Text } from 'react-native-paper';
-import {SafeAreaView, StyleProp, StyleSheet, View, ViewProps, ViewStyle} from 'react-native'
+import {SafeAreaView, StyleProp, StyleSheet, View, ViewProps, ViewStyle, ScrollView} from 'react-native'
 import { IconSource } from 'react-native-paper/lib/typescript/components/Icon';
 import { ThemeProp } from 'react-native-paper/lib/typescript/types';
 interface Props{
@@ -19,7 +19,7 @@ const NewsScreen = ({name = 'World'}: Props) => {
     }
   };
 
-  fetch('https://newsapi.org/v2/top-headlines?country=mx&apiKey=e331ba0867904e23a70f53283206d69d', options)
+  fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e331ba0867904e23a70f53283206d69d', options)
       .then(response => response.json())
       .then(data => setNews(data.articles))
       
@@ -31,8 +31,8 @@ const NewsScreen = ({name = 'World'}: Props) => {
   return (
     
     <SafeAreaView style={styles.container}>
-    <View>
-    <Text style={styles.title}>Last News of Apple</Text>
+    <ScrollView>
+    <Text style={styles.title}>Last News </Text>
 {/* <Text>{news}</Text> */}
     {news.map((record) => ( 
     <Card>
@@ -48,7 +48,7 @@ const NewsScreen = ({name = 'World'}: Props) => {
     </Card.Actions>
   </Card>
     ))}  
-    </View>
+   </ScrollView>
     </SafeAreaView>
   )
 }
