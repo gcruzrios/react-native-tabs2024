@@ -6,6 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HelloScreen from './src/presentation/screens/HelloScreen';
 import HomeScreen from './src/presentation/screens/HomeScreen';
 import NewsScreen from './src/presentation/screens/NewsScreen';
+import SettingsScreen from './src/presentation/screens/SettingsScreen';
+
 // function HomeScreen() {
 //   return (
 //     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -14,13 +16,7 @@ import NewsScreen from './src/presentation/screens/NewsScreen';
 //   );
 // }
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={styles.title}>Settings</Text>
-    </View>
-  );
-}
+
 
 // function NewsScreen() {
 //   return (
